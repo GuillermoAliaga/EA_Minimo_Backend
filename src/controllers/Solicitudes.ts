@@ -139,3 +139,12 @@ const hardDeleteSolicitud = async (req: Request<{ id: string }>, res: Response, 
         next(error);
     }
 };
+
+export default {
+    createSolicitud,
+    getSolicitudById,
+    updateStatus,
+    softDeleteSolicitud,
+    hardDeleteSolicitud,
+    readAllSolicitudes,
+};

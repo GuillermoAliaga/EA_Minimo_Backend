@@ -14,6 +14,7 @@ import userRoutes from './routes/User';
 import activityRoutes from './routes/Activity';
 import reportRoutes from './routes/Report';
 import { attachChat } from './services/ChatService';
+import solicitudesRoutes from './routes/Solicitudes';
 
 const router = express();
 
@@ -43,6 +44,7 @@ const StartServer = () => {
     router.use('/users', userRoutes);
     router.use('/activities', activityRoutes);
     router.use('/reports', reportRoutes);
+    router.use('/solicitudes', solicitudesRoutes);
     router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
     /** Healthcheck */
